@@ -28,7 +28,7 @@ while True:
     print('-+' * 10)
     total += valor_vezes_quantidade
     for produto, valor in lista_de_compras.items():
-        print(f'- {produto:<16}{codigo}\n  {valor * quants[contador - 1]:.2f}\n')
+        print(f'- {produto:<16}{contador}\n  R${valor * quants[contador - 1]:.2f}\n  (qnt{quants[contador - 1]:>4} x R${valor:.2f})\n')
         contador += 1
     print(f'TOTAL: {total:.2f}')
     print('-+' * 10)
@@ -41,4 +41,4 @@ while True:
 for produto, valor in lista_de_compras.items():
     print(f'- {produto:<16}{codigo}\n  {valor:.2f}\n')
     codigo += 1
-print(f'TOTAL: {total:.2f}')
+print(f'TOTAL: R${total:.2f}')
