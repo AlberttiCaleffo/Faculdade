@@ -40,5 +40,22 @@ while True:
     
 for produto, valor in lista_de_compras.items():
     print(f'- {produto:<16}{codigo}\n  {valor:.2f}\n')
+    sleep(0.5)
     codigo += 1
 print(f'TOTAL: R${total:.2f}')
+sleep(1)
+
+while True:
+    forma_de_pagamento = int(input('Qual a forma de pagamento?\n'
+        '1- Dinheiro\n'
+        '2- Cartão de debito\n'
+        '3- Cartão de credito\n'
+        '4- Pix'))
+
+    if forma_de_pagamento == 1:
+        dinheiro = float(input('Quantia em dinheiro: R$ '))
+        if dinheiro < total:
+            print('Dinheiro insuficiente...')
+            print('Trocar forma de pagamento? [S/N] ')
+        else:
+            print(f'Seu troco é R$ {dinheiro - total:.2f}')
