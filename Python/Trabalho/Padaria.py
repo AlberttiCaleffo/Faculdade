@@ -10,10 +10,9 @@ quants = []
 print('Bem-Vindo a padaria [nome]')
 sleep(1)
 
-# menu()
 
 while True:
-    produto = input('Nome do produto: ').strip()
+    produto = input('Nome do produto: ').strip().title()
     while True:
         try:
             valor = float(input('Valor: '))
@@ -47,13 +46,12 @@ while True:
     limpa_tela()
     if continuar[0] == 'n':
         codigo = 0
-        break 
+        break
     
 compra(lista_de_compras, quants, contador)
 
 total(total_compra)
 sleep(1)
-
 
 while True:
     forma_de_pagamento = int(input('Qual a forma de pagamento?\n'

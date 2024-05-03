@@ -19,9 +19,3 @@ def compra(lista_de_compras, quants, contador):
               f'(qnt{quants[contador - 1]:>4} x R${valor:.2f})\n')
         contador += 1
         sleep(0.5)
-        
-# def menu():
-#     opcao = input('Menu:\n'
-#           '1- Efetuar uma venda.\n'
-#           '2- Vizualizar estoque.\n'
-#           '> ')
