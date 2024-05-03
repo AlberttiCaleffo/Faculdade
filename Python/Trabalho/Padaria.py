@@ -1,5 +1,5 @@
 from time import sleep
-from Sistema import limpa_tela, total
+from Sistema import limpa_tela, total, compra
 
 lista_de_compras = {}
 
@@ -9,6 +9,8 @@ quants = []
 
 print('Bem-Vindo a padaria [nome]')
 sleep(1)
+
+# menu()
 
 while True:
     produto = input('Nome do produto: ').strip()
@@ -28,6 +30,7 @@ while True:
         except:
             print('Dado incorreto. Insira novamente.')
     lista_de_compras[produto] = valor
+    
     print('Adicionando...')
     sleep(1)
     print('Adicionado')
@@ -37,10 +40,7 @@ while True:
 
     print('-+' * 10)
     total_compra += valor_vezes_quantidade
-    for produto, valor in lista_de_compras.items():
-        print(f'- {produto:<16}{contador}\n  R${valor * quants[contador - 1]:.2f}\n'  
-              f'(qnt{quants[contador - 1]:>4} x R${valor:.2f})\n')
-        contador += 1
+    compra(lista_de_compras, quants, contador)
     total(total_compra)
     contador = 1
     continuar = input('Continuar? [S/N]: ').strip().lower()
@@ -49,11 +49,7 @@ while True:
         codigo = 0
         break 
     
-for produto, valor in lista_de_compras.items():
-    print(f'- {produto:<16}{contador}\n  R${valor * quants[contador - 1]:.2f}\n'  
-          f'(qnt{quants[contador - 1]:>4} x R${valor:.2f})\n')
-    sleep(0.5)
-    codigo += 1
+compra(lista_de_compras, quants, contador)
 
 total(total_compra)
 sleep(1)
@@ -78,6 +74,8 @@ while True:
                 print('Compra recusada.')
                 break
         else:
+            print('Processando...')
+            sleep(1)
             print('-=' * 10)
             print(f'Seu troco é R$ {dinheiro - total_compra:.2f}')
             print('-=' * 10)
