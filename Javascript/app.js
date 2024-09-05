@@ -36,4 +36,5 @@ let j = 10;
 
 do{
     console.log(j);
+    j = Number(prompt("Digite um número diferente de 10 para executar de novo"));
 }while(j != 10);
