@@ -87,6 +87,8 @@ form{
     display: flex;
     flex-direction: column;
     width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
 }
 form [type="submit"]{
     height: 50px;
@@ -98,10 +100,18 @@ form [type="submit"]{
 
 form [type="submit"]:hover{
     cursor: pointer;
-}         
-form[type="submit"]:hover{
-    cursor: pointer;
+} 
+
+label {
+    margin: 0 auto;
+    margin-top: 20px;
 }
+
+button {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
 input{
     margin-top: 20px;
     height: 20px;
