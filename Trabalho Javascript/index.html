@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <title>Remedy day</title>
 </head>
 
@@ -38,6 +37,9 @@
             </a>
         </ul>
     </header>
+
+    <hr>
+
     <main><!--Parte principal do site(centro)-->
         <aside>
             <h2><span>Inscreva-se e agende seu horário!</span></h2>
@@ -46,9 +48,9 @@
                 personalizado e uma equipe sempre pronta para ouvir suas necessidades. Com uma ampla variedade de
                 produtos de saúde e bem-estar, garantimos sua satisfação! Preencha já este formulário e garanta seu
                 atendimento!</p>
-            <form>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
+            <form class="formulario" data-email="nomeId" data-password="emailId">
+                <input type="text" id="nomeId" placeholder="Nome">
+                <input type="email" id="emailId"placeholder="E-mail">
                 <input type="submit" value="Enviar >">
             </form>
         </aside>
@@ -57,8 +59,10 @@
         </article>
     </main>
     <footer>
-        <p>&copy; 2024 Remedy-Day. Todos os direitos reservados.</p>
+        <h5>&copy; 2024 Remedy-Day. Todos os direitos reservados.</h5>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

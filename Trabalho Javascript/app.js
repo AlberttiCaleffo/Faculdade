@@ -25,6 +25,21 @@ formularios.forEach(form => {
   });
 });
 
+const logins = document.querySelectorAll('.login');
+
+logins.forEach(form => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const emailId = form.dataset.email; 
+    const passwordId = form.dataset.password; 
+
+    if (validarFormulario(form.id, emailId, passwordId)) {
+      alert('Login efetuado com sucesso!');
+    }
+  });
+});
+
 const serviceCards = document.querySelectorAll('.produtos div');
 
 serviceCards.forEach(card => {

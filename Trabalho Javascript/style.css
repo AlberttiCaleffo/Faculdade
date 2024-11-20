@@ -102,14 +102,16 @@ form [type="submit"]:hover{
     cursor: pointer;
 } 
 
+.login [type="submit"]{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 label {
     margin: 0 auto;
     margin-top: 20px;
-}
-
-button {
-    margin: 0 auto;
-    margin-top: 30px;
 }
 
 input{
@@ -123,10 +125,12 @@ input{
 
 /* rodade */
 footer {
-    background-color: royalblue;
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }

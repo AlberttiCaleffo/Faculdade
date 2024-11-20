@@ -46,7 +46,7 @@ a{
     
 }
 a:hover{
-    color: royalblue;
+    color: black;
     transition: 0.3s all;
 }
 
@@ -63,14 +63,15 @@ body{
 
 /* rodape */
 footer {
-    background-color: royalblue;
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
-
 #remedios {
     width: 300px;
     height: 300px;
@@ -98,8 +99,11 @@ footer {
     position: relative;
     top: 300px;
     right: 145px;
-    background-color: black;
+    background-color: royalblue;
     border-radius: 10px;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
 }
 
 #suplementos {
@@ -129,8 +133,11 @@ footer {
     position: relative;
     top: 300px;
     right: 185px;
-    background-color: black;
+    background-color: royalblue;
     border-radius: 10px;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
 }
 
 #cosmeticos {
@@ -160,6 +167,9 @@ footer {
     position: relative;
     top: 300px;
     right: 170px;
-    background-color: black;
+    background-color: royalblue;
     border-radius: 10px;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
 }
